@@ -1,0 +1,7 @@
+/* Dark-mode action contrast: keep button labels readable against themed fills. */
+.dark-mode .button-primary{background:#55d5dc;color:#07131f;border-color:#55d5dc}
+.dark-mode .button-primary:hover{background:#8be8ec;color:#07131f}
+.dark-mode .check-answer{background:#55d5dc;color:#07131f}
+.dark-mode .check-answer:hover{background:#8be8ec;color:#07131f}
+.dark-mode .button-ghost,.dark-mode .theme-toggle{background:#10243a;color:#ecf4fb;border-color:#6c879d}
+.dark-mode .button-ghost:hover,.dark-mode .theme-toggle:hover{background:#1b3851;color:#ffffff;border-color:#55d5dc}
