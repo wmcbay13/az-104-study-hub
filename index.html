@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="An interactive study hub for the Microsoft Azure Administrator AZ-104 certification." />
+    <title>AZ-104 Study Hub | Azure Administrator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="#top" aria-label="AZ-104 Study Hub home"><span class="brand-mark">⌁</span><span>AZ<span class="brand-accent">·</span>104</span><small>STUDY HUB</small></a>
+        <nav class="main-nav" aria-label="Primary navigation">
+          <a href="#roadmap">Roadmap</a>
+          <a href="#curriculum">Curriculum</a>
+          <a href="#practice">Practice</a>
+          <a href="#traps">Traps</a>
+        </nav>
+        <button class="button button-ghost" data-scroll="#practice">Start a quiz <span>↗</span></button>
+      </header>
+
+      <main id="top">
+        <section class="hero wrap">
+          <div class="hero-copy">
+            <p class="kicker"><span class="kicker-dot"></span> MICROSOFT AZURE ADMINISTRATOR</p>
+            <h1>Make Azure<br /><em>click.</em></h1>
+            <p class="hero-lede">A practical, focused companion for the AZ-104 exam — understand the services, spot the traps, and build confidence one decision at a time.</p>
+            <div class="hero-actions">
+              <button class="button button-primary" data-scroll="#roadmap">See the roadmap <span>↓</span></button>
+              <a class="inline-link" href="https://learn.microsoft.com/en-us/credentials/certifications/azure-administrator/" target="_blank" rel="noreferrer">Official certification page <span>↗</span></a>
+            </div>
+            <div class="hero-note"><span>✦</span><p><strong>Current objectives</strong> · Skills measured April 17, 2026<br />Always verify the official study guide before exam day.</p></div>
+          </div>
+          <div class="hero-visual" aria-label="Azure study dashboard illustration">
+            <div class="grid-lines"></div>
+            <div class="orb orb-a"></div><div class="orb orb-b"></div>
+            <div class="dashboard-card main-card">
+              <div class="card-top"><span class="window-dots"><i></i><i></i><i></i></span><span class="mono">READINESS / 01</span></div>
+              <div class="readiness-score"><strong id="hero-progress">0%</strong><span>ready to build</span></div>
+              <div class="progress-track"><span id="hero-progress-bar"></span></div>
+              <div class="mini-domain"><span class="domain-icon cyan">ID</span><div><b>Identity &amp; governance</b><small>20–25% of exam</small></div><span class="mini-check">○</span></div>
+              <div class="mini-domain"><span class="domain-icon purple">ST</span><div><b>Storage</b><small>15–20% of exam</small></div><span class="mini-check">○</span></div>
+              <div class="mini-domain"><span class="domain-icon orange">VM</span><div><b>Compute</b><small>20–25% of exam</small></div><span class="mini-check">○</span></div>
+            </div>
+            <div class="floating-label label-one"><span class="pulse"></span> 60 PRACTICE Qs</div>
+            <div class="floating-label label-two">30 / 90 DAY PLANS <span>→</span></div>
+            <div class="visual-caption">ADMINISTRATOR<br />MINDSET</div>
+          </div>
+        </section>
+
+        <section class="stats-strip wrap" aria-label="Exam at a glance">
+          <div><span class="stat-number">05</span><span class="stat-label">skill domains</span></div>
+          <div><span class="stat-number">60</span><span class="stat-label">original practice Qs</span></div>
+          <div><span class="stat-number">700</span><span class="stat-label">score to pass</span></div>
+          <div><span class="stat-number">02</span><span class="stat-label">study timelines</span></div>
+        </section>
+
+        <section class="roadmap-section wrap" id="roadmap">
+          <div class="section-heading"><div><p class="kicker"><span class="kicker-dot"></span> PICK YOUR PACE</p><h2>A plan with<br /><em>momentum.</em></h2></div><p class="section-intro">Choose the runway that matches your calendar. Both paths revisit every objective, layer in scenario thinking, and end with timed practice.</p></div>
+          <div class="plan-tabs" role="tablist" aria-label="Study plan length"><button class="plan-tab is-active" role="tab" aria-selected="true" data-plan="30">30 days <small>FOCUSED SPRINT</small></button><button class="plan-tab" role="tab" aria-selected="false" data-plan="90">90 days <small>STEADY BUILD</small></button></div>
+          <div id="plan-content" class="plan-content" aria-live="polite"></div>
+        </section>
+
+        <section class="curriculum-section" id="curriculum">
+          <div class="wrap">
+            <div class="section-heading light"><div><p class="kicker"><span class="kicker-dot"></span> SKILLS MEASURED</p><h2>Five domains.<br /><em>One system.</em></h2></div><p class="section-intro">The exam tests whether you can choose and operate the right Azure control in context — not just recite product names.</p></div>
+            <div class="domain-grid" id="domain-grid"></div>
+          </div>
+        </section>
+
+        <section class="practice-section wrap" id="practice">
+          <div class="section-heading"><div><p class="kicker"><span class="kicker-dot"></span> CHECK YOUR SIGNAL</p><h2>Practice like<br /><em>an admin.</em></h2></div><p class="section-intro">60 original questions across the current objectives. Read the constraint, identify the control plane, then choose the smallest correct answer.</p></div>
+          <div class="practice-toolbar"><div class="filter-group" role="group" aria-label="Practice filters"><button class="filter-button is-active" data-filter="all">All <span>60</span></button><button class="filter-button" data-filter="case">Case studies <span id="case-count">12</span></button><button class="filter-button" data-filter="trap">Trap checks <span id="trap-count">12</span></button></div><div class="quiz-score" id="quiz-score">0 answered · 0%</div></div>
+          <div class="quiz-layout"><div class="question-list" id="question-list"></div><aside class="quiz-side"><div class="side-card accent-card"><span class="side-icon">✦</span><h3>How to use this bank</h3><p>Answer without peeking. Then open the rationale, follow the source link, and add the gap to your review list.</p><ol><li>Read the constraint first.</li><li>Eliminate controls that solve a different layer.</li><li>Explain why the other choices fail.</li></ol></div><div class="side-card"><span class="mono">OFFICIAL SHORTCUTS</span><a href="https://learn.microsoft.com/en-us/credentials/certifications/exams/az-104/practice/assessment?assessment-type=practice&assessmentId=23" target="_blank" rel="noreferrer">Microsoft Practice Assessment ↗</a><a href="https://aka.ms/exam-sandbox" target="_blank" rel="noreferrer">Exam sandbox ↗</a><a href="https://learn.microsoft.com/en-us/training/paths/az-104-administrator-prerequisites/" target="_blank" rel="noreferrer">Prerequisites path ↗</a></div></aside></div>
+          <div class="quiz-actions"><button class="button button-primary" id="reset-quiz">Reset answers</button><button class="button button-ghost" data-scroll="#top">Back to top ↑</button></div>
+        </section>
+
+        <section class="traps-section" id="traps">
+          <div class="wrap"><div class="section-heading light"><div><p class="kicker"><span class="kicker-dot"></span> READ THE WORDING</p><h2>Common traps<br /><em>decoded.</em></h2></div><p class="section-intro">The most expensive mistakes are usually scope mistakes. Use these contrasts to sharpen your first read of a scenario.</p></div><div class="trap-grid" id="trap-grid"></div></div>
+        </section>
+
+        <section class="sources-section wrap" id="sources">
+          <div class="source-callout"><div><p class="kicker"><span class="kicker-dot"></span> KEEP IT CURRENT</p><h2>Use the docs<br /><em>as your lab partner.</em></h2><p>Product behavior, SKUs, and exam objectives change. The official Microsoft Learn pages below are the final word.</p></div><a class="button button-primary" href="https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-104" target="_blank" rel="noreferrer">Open study guide <span>↗</span></a></div>
+          <div class="source-grid"><a href="https://learn.microsoft.com/en-us/training/paths/az-104-manage-identities-governance/" target="_blank" rel="noreferrer"><span>01</span><b>Manage identities &amp; governance</b><small>Microsoft Learn path ↗</small></a><a href="https://learn.microsoft.com/en-us/training/paths/az-104-manage-storage/" target="_blank" rel="noreferrer"><span>02</span><b>Implement &amp; manage storage</b><small>Microsoft Learn path ↗</small></a><a href="https://learn.microsoft.com/en-us/training/paths/az-104-manage-compute-resources/" target="_blank" rel="noreferrer"><span>03</span><b>Deploy &amp; manage compute</b><small>Microsoft Learn path ↗</small></a><a href="https://learn.microsoft.com/en-us/training/paths/az-104-manage-virtual-networks/" target="_blank" rel="noreferrer"><span>04</span><b>Manage virtual networking</b><small>Microsoft Learn path ↗</small></a><a href="https://learn.microsoft.com/en-us/training/paths/az-104-monitor-backup-resources/" target="_blank" rel="noreferrer"><span>05</span><b>Monitor &amp; back up resources</b><small>Microsoft Learn path ↗</small></a><a href="https://learn.microsoft.com/en-us/azure/" target="_blank" rel="noreferrer"><span>↗</span><b>Azure documentation</b><small>Browse the reference library ↗</small></a></div>
+        </section>
+      </main>
+      <footer class="footer wrap"><a class="brand" href="#top"><span class="brand-mark">⌁</span><span>AZ<span class="brand-accent">·</span>104</span></a><span>For learning, not leaked questions.</span><span>Objectives verified September 2026 · <a href="#sources">Sources</a></span></footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
