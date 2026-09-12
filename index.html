@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="theme.css" />
   </head>
   <body>
     <div class="app-shell">
@@ -20,6 +21,7 @@
           <a href="#practice">Practice</a>
           <a href="#traps">Traps</a>
         </nav>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false"><span class="theme-icon">☾</span><span class="theme-label">Dark mode</span></button>
         <button class="button button-ghost" data-scroll="#practice">Start a quiz <span>↗</span></button>
       </header>
 
@@ -46,7 +48,7 @@
               <div class="mini-domain"><span class="domain-icon purple">ST</span><div><b>Storage</b><small>15–20% of exam</small></div><span class="mini-check">○</span></div>
               <div class="mini-domain"><span class="domain-icon orange">VM</span><div><b>Compute</b><small>20–25% of exam</small></div><span class="mini-check">○</span></div>
             </div>
-            <div class="floating-label label-one"><span class="pulse"></span> 60 PRACTICE Qs</div>
+            <div class="floating-label label-one"><span class="pulse"></span> 80 PRACTICE Qs</div>
             <div class="floating-label label-two">30 / 90 DAY PLANS <span>→</span></div>
             <div class="visual-caption">ADMINISTRATOR<br />MINDSET</div>
           </div>
@@ -74,7 +76,8 @@
 
         <section class="practice-section wrap" id="practice">
           <div class="section-heading"><div><p class="kicker"><span class="kicker-dot"></span> CHECK YOUR SIGNAL</p><h2>Practice like<br /><em>an admin.</em></h2></div><p class="section-intro">60 original questions across the current objectives. Read the constraint, identify the control plane, then choose the smallest correct answer.</p></div>
-          <div class="practice-toolbar"><div class="filter-group" role="group" aria-label="Practice filters"><button class="filter-button is-active" data-filter="all">All <span>60</span></button><button class="filter-button" data-filter="case">Case studies <span id="case-count">12</span></button><button class="filter-button" data-filter="trap">Trap checks <span id="trap-count">12</span></button></div><div class="quiz-score" id="quiz-score">0 answered · 0%</div></div>
+          <div class="practice-toolbar"><div class="filter-group" role="group" aria-label="Practice filters"><button class="filter-button is-active" data-filter="all">All <span id="all-count">80</span></button><button class="filter-button" data-filter="case">Case studies <span id="case-count">11</span></button><button class="filter-button" data-filter="trap">Trap checks <span id="trap-count">15</span></button></div><div class="quiz-score" id="quiz-score">0 answered · 0%</div></div>
+          <div class="icon-strip"><div class="icon-strip-copy"><span class="mono">VISUAL QUESTION KIT</span><p>Service recognition matters. These are official Microsoft Azure architecture icons used in the visual scenarios below.</p></div><div class="icon-row"><div><img src="assets/icons/virtual-network.svg" alt="Azure Virtual Network icon" /><span>VNet</span></div><div><img src="assets/icons/storage-account.svg" alt="Azure Storage account icon" /><span>Storage</span></div><div><img src="assets/icons/virtual-machine.svg" alt="Azure Virtual Machine icon" /><span>VM</span></div><div><img src="assets/icons/private-endpoint.svg" alt="Azure Private Endpoint icon" /><span>Private endpoint</span></div><div><img src="assets/icons/azure-monitor.svg" alt="Azure Monitor icon" /><span>Monitor</span></div></div></div>
           <div class="quiz-layout"><div class="question-list" id="question-list"></div><aside class="quiz-side"><div class="side-card accent-card"><span class="side-icon">✦</span><h3>How to use this bank</h3><p>Answer without peeking. Then open the rationale, follow the source link, and add the gap to your review list.</p><ol><li>Read the constraint first.</li><li>Eliminate controls that solve a different layer.</li><li>Explain why the other choices fail.</li></ol></div><div class="side-card"><span class="mono">OFFICIAL SHORTCUTS</span><a href="https://learn.microsoft.com/en-us/credentials/certifications/exams/az-104/practice/assessment?assessment-type=practice&assessmentId=23" target="_blank" rel="noreferrer">Microsoft Practice Assessment ↗</a><a href="https://aka.ms/exam-sandbox" target="_blank" rel="noreferrer">Exam sandbox ↗</a><a href="https://learn.microsoft.com/en-us/training/paths/az-104-administrator-prerequisites/" target="_blank" rel="noreferrer">Prerequisites path ↗</a></div></aside></div>
           <div class="quiz-actions"><button class="button button-primary" id="reset-quiz">Reset answers</button><button class="button button-ghost" data-scroll="#top">Back to top ↑</button></div>
         </section>
@@ -85,7 +88,7 @@
 
         <section class="sources-section wrap" id="sources">
           <div class="source-callout"><div><p class="kicker"><span class="kicker-dot"></span> KEEP IT CURRENT</p><h2>Use the docs<br /><em>as your lab partner.</em></h2><p>Product behavior, SKUs, and exam objectives change. The official Microsoft Learn pages below are the final word.</p></div><a class="button button-primary" href="https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-104" target="_blank" rel="noreferrer">Open study guide <span>↗</span></a></div>
-          <div class="source-grid"><a href="https://learn.microsoft.com/en-us/training/paths/az-104-manage-identities-governance/" target="_blank" rel="noreferrer"><span>01</span><b>Manage identities &amp; governance</b><small>Microsoft Learn path ↗</small></a><a href="https://learn.microsoft.com/en-us/training/paths/az-104-manage-storage/" target="_blank" rel="noreferrer"><span>02</span><b>Implement &amp; manage storage</b><small>Microsoft Learn path ↗</small></a><a href="https://learn.microsoft.com/en-us/training/paths/az-104-manage-compute-resources/" target="_blank" rel="noreferrer"><span>03</span><b>Deploy &amp; manage compute</b><small>Microsoft Learn path ↗</small></a><a href="https://learn.microsoft.com/en-us/training/paths/az-104-manage-virtual-networks/" target="_blank" rel="noreferrer"><span>04</span><b>Manage virtual networking</b><small>Microsoft Learn path ↗</small></a><a href="https://learn.microsoft.com/en-us/training/paths/az-104-monitor-backup-resources/" target="_blank" rel="noreferrer"><span>05</span><b>Monitor &amp; back up resources</b><small>Microsoft Learn path ↗</small></a><a href="https://learn.microsoft.com/en-us/azure/" target="_blank" rel="noreferrer"><span>↗</span><b>Azure documentation</b><small>Browse the reference library ↗</small></a></div>
+          <div class="source-grid"><a href="https://learn.microsoft.com/en-us/training/paths/az-104-manage-identities-governance/" target="_blank" rel="noreferrer"><span>01</span><b>Manage identities &amp; governance</b><small>Microsoft Learn path ↗</small></a><a href="https://learn.microsoft.com/en-us/training/paths/az-104-manage-storage/" target="_blank" rel="noreferrer"><span>02</span><b>Implement &amp; manage storage</b><small>Microsoft Learn path ↗</small></a><a href="https://learn.microsoft.com/en-us/training/paths/az-104-manage-compute-resources/" target="_blank" rel="noreferrer"><span>03</span><b>Deploy &amp; manage compute</b><small>Microsoft Learn path ↗</small></a><a href="https://learn.microsoft.com/en-us/training/paths/az-104-manage-virtual-networks/" target="_blank" rel="noreferrer"><span>04</span><b>Manage virtual networking</b><small>Microsoft Learn path ↗</small></a><a href="https://learn.microsoft.com/en-us/training/paths/az-104-monitor-backup-resources/" target="_blank" rel="noreferrer"><span>05</span><b>Monitor &amp; back up resources</b><small>Microsoft Learn path ↗</small></a><a href="https://learn.microsoft.com/en-us/azure/architecture/icons/" target="_blank" rel="noreferrer"><span>↗</span><b>Official Azure icon set</b><small>Architecture Center terms &amp; downloads ↗</small></a></div>
         </section>
       </main>
       <footer class="footer wrap"><a class="brand" href="#top"><span class="brand-mark">⌁</span><span>AZ<span class="brand-accent">·</span>104</span></a><span>For learning, not leaked questions.</span><span>Objectives verified September 2026 · <a href="#sources">Sources</a></span></footer>
