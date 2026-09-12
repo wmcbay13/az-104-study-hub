@@ -10,7 +10,7 @@ python3 -m http.server 8000
 
 Then visit `http://localhost:8000`.
 
-The hub includes 30- and 90-day study plans, an 80-question practice bank, visual case studies with diagrams and tables, dark mode, official Azure service icons, common exam traps, progress saved in browser `localStorage`, and links to Microsoft Learn documentation. The question bank is original practice content and is not an actual Microsoft exam bank.
+The hub includes 30- and 90-day study plans, a 90-question practice bank, advanced multi-constraint scenarios, visual case studies with diagrams and tables, dark mode, official Azure service icons, common exam traps, progress saved in browser `localStorage`, and links to Microsoft Learn documentation. The question bank is original practice content and is not an actual Microsoft exam bank.
 
 The service icons come from Microsoft’s [Azure Architecture Center icon set](https://learn.microsoft.com/en-us/azure/architecture/icons/) and are used for training/diagram purposes under Microsoft’s published icon terms.
 
