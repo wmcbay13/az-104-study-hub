@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="theme.css" />
     <link rel="stylesheet" href="contrast.css" />
+    <link rel="stylesheet" href="flashcards.css" />
   </head>
   <body>
     <div class="app-shell">
@@ -19,6 +20,7 @@
         <nav class="main-nav" aria-label="Primary navigation">
           <a href="#roadmap">Roadmap</a>
           <a href="#curriculum">Curriculum</a>
+          <a href="#flashcards">Flashcards</a>
           <a href="#practice">Practice</a>
           <a href="#traps">Traps</a>
         </nav>
@@ -73,6 +75,13 @@
             <div class="section-heading light"><div><p class="kicker"><span class="kicker-dot"></span> SKILLS MEASURED</p><h2>Five domains.<br /><em>One system.</em></h2></div><p class="section-intro">The exam tests whether you can choose and operate the right Azure control in context — not just recite product names.</p></div>
             <div class="domain-grid" id="domain-grid"></div>
           </div>
+        </section>
+
+        <section class="flashcards-section wrap" id="flashcards">
+          <div class="section-heading"><div><p class="kicker"><span class="kicker-dot"></span> VISUAL MEMORY</p><h2>See it.<br /><em>Recall it.</em></h2></div><p class="section-intro">Flip through the diagrams you’ll use to reason about common AZ-104 scenarios. Start with the picture, then reveal the admin takeaway and source.</p></div>
+          <div class="flash-toolbar"><div class="flash-filters" role="group" aria-label="Flashcard filters"><button class="flash-filter is-active" data-flash-filter="all">All</button><button class="flash-filter" data-flash-filter="identity">Identity</button><button class="flash-filter" data-flash-filter="storage">Storage</button><button class="flash-filter" data-flash-filter="compute">Compute</button><button class="flash-filter" data-flash-filter="network">Networking</button><button class="flash-filter" data-flash-filter="monitor">Operations</button></div><span class="flash-counter" id="flash-counter">12 visual cards</span></div>
+          <div class="flashcard-grid" id="flashcard-grid"></div>
+          <p class="flash-help"><span>↻</span> Click “Flip card” or use Enter/Space after focusing a card. These diagrams are study aids; always follow the linked Microsoft documentation for the current behavior.</p>
         </section>
 
         <section class="practice-section wrap" id="practice">
